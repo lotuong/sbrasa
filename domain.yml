@@ -1,6 +1,6 @@
 session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  session_expiration_time: 30
+  carry_over_slots_to_new_session: false
 intents:
 - greet
 - goodbye
@@ -9,6 +9,39 @@ intents:
 - mood_great
 - mood_unhappy
 - bot_challenge
+- func_list
+- my_name_is
+- name
+- hey
+- function
+- system
+- object
+- yeu_cau_ho_tro
+- marry_me
+- weather
+- bot_insult_vnm
+- bot_insult_eng
+entities:
+- dxung
+- name
+- function
+- system
+- object
+slots:
+  dxung:
+    type: text
+    initial_value: anh/chị
+  function:
+    type: text
+  name:
+    type: text
+    initial_value: ''
+  object:
+    type: text
+    initial_value: tài khoản
+  system:
+    type: text
+    initial_value: T24
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -27,6 +60,22 @@ actions:
 - utter_greet
 - utter_cheer_up
 - utter_did_that_help
-- utter_happy
+- utter_thanks
 - utter_goodbye
 - utter_iamabot
+- utter_unclear
+- utter_func_list
+- utter_ask_name
+- utter_need_help
+- utter_greet_by_name
+- utter_thay_doi_phan_quyen_tk_t24
+- utter_cap_moi_tk_t24
+- utter_gia_han_tk_t24
+- utter_thu_hoi_tk_t24
+- utter_reset_tk_t24
+- utter_unlock_tk_t24
+- utter_too_young
+- utter_always_sunny
+- utter_not_nice_eng
+- utter_not_nice_vnm
+- utter_happy
